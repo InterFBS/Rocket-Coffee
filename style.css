@@ -31,7 +31,6 @@ body {
   color: #ffffff;
   display: flex;
   flex-direction: row;
-  width: 918px;
   height: 50px;
   margin: 20px auto;
   justify-content: space-around;
@@ -141,7 +140,7 @@ body {
   }
   html{
     background: #8257e582;
-    
+    display: grid;
   }
   #header #menu {
     display: block;
@@ -149,7 +148,7 @@ body {
     width: 100%;
     top: 70px;
     right: 0;
-    background: #1e113b7a;
+    background: #1e113ba9;
     z-index: 1000;
     height: 0;
     transition: 0.6s;
@@ -157,9 +156,17 @@ body {
     overflow-y: hidden;
   }
   #header #nav.active #menu {
-    height: calc(100vh - 70px);
+    height: 100vh;
     visibility: visible;
     overflow-y: auto;
+    padding-top: 20px;
+  }
+  #header #nav.active #menu li{
+    padding-top: 20px;
+    border-left: 3px solid var(--text-color);
+    border-right: 3px solid var(--text-color);
+    padding: 1rem;
+    margin: 0 1rem;
   }
   #header #menu a {
     padding: 1rem;
@@ -202,5 +209,5 @@ body {
     top: -6px;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 640px) {
 }
