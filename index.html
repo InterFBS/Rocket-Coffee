@@ -21,12 +21,18 @@
             </a>
         </div>
         <div class="header-menu">
-            <nav>
-                <a href="">Home</a>
-                <a href="">Menu</a>
-                <a href="">Recompensas</a>
-                <a href="">Gift Cards</a>
-                <a href="">Lojas</a>
+            <nav id="nav">
+                <button aria-label="Abrir menu" id="btn-menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Recompensas</a></li>
+                    <li><a href="">Gift Cards</a></li>
+                    <li><a href="">Lojas</a></li>
+                </ul>
             </nav>
         </div>
         <div class="header-button">
@@ -49,6 +55,7 @@
         </section>
     </main>
     <!-- End Section Main -->
+    <script src="main.js"></script>
 </body>
 
 </html>
