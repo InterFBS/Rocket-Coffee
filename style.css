@@ -96,6 +96,12 @@ body {
 #main #main-title {
   text-align: center;
 }
+#main .title-mobile-1{
+  display: none;
+}
+#main .header-button-2{
+  display: none;
+}
 .title-1 {
   color: var(--text-color);
   font-family: "Manrope";
@@ -146,7 +152,7 @@ body {
     display: block;
     position: absolute;
     width: 100%;
-    top: 70px;
+    top: 90px;
     right: 0;
     background: #1e113ba9;
     z-index: 1000;
@@ -208,6 +214,84 @@ body {
     transform: rotate(-135deg);
     top: -6px;
   }
+  #main .title-1,
+  .title-2 {
+  font-size: clamp(16px, 10vw, 128px);
+  }
+  #main .title-mobile-1{
+    display: none;
+  }
+  #main .header-button-2{
+    display: none;
+  }
 }
-@media (max-width: 640px) {
+@media (min-width: 400px) and (max-width: 640px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  html{
+    background: url(assets/Mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+  }
+  #header .header-logo {
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+  }
+  #header .header-logo a{
+    display: flex;
+    justify-content: center;
+  }
+  #header .header-logo a::after{
+    content: 'Rocketseat';
+    color: var(--text-color);
+    align-self: center;
+    padding: 10px;
+  }
+  #header .header-button{
+    display: none;
+  }
+  #header #btn-menu {
+    background: var(--button);
+    padding: 0.5rem 0.5rem;
+    border-radius: 14px;
+  }
+  #header .header-menu{
+    padding: 30px;
+  }
+  #header #nav.active #menu {
+    background: var(--button);
+  }
+  #main .header-button-2{
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+  }
+  #main .header-button-2 button{
+    color: var(--text-color);
+    background: transparent;
+    border: 2px solid var(--button);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  #main .title-mobile-1{
+    display: block;
+  }
+  #main .title-mobile-1 h1{
+    color: var(--text-color);
+    text-align: center;
+  }
+  #main .title-1,
+  .title-2 {
+  font-size: clamp(16px, 10vw, 128px);
+  }
 }
